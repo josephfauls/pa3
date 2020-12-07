@@ -1,5 +1,7 @@
 # Programming Assignment 3
 
+https://www.youtube.com/watch?v=Us937dT2NNM&feature=youtu.be
+
 # To Run:
 Clone/download my github repository for this assignment. 
 Navigate to the my-app folder and call ‘npm i’ (NOTE: you need node installed). 
