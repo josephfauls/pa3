@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Search from './Components/Search';
 import SoundList from './Components/SoundList';
@@ -21,17 +20,37 @@ const start = (name) => {
 
   return (
     <div className="App">
-      <header className="App-header"><h1>pa3: soundboard</h1>
+      <header className="App-header"><h1 style={{fontSize: '50px',marginBottom: '0px'}}>PA3: Soundboard</h1>
+      <h2 style={{fontSize: '18px',marginBottom: '0px'}}>Sources: 
+      <a style={{marginLeft: '10px',color: 'orchid'}} href="https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ">Pekora</a>, 
+      <a style={{marginLeft: '10px',color: 'orchid'}} href="https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q">Korone</a>, 
+      <a style={{marginLeft: '10px',color: 'orchid'}} href="https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg/featured">Haachama</a>
+      </h2>
         <Search onFilterChange={filterUpdate}/>
-        <table><tr><td>
         <table>
-          <tr><th>Korone<img src='bone.png'></img></th><th>Pekora<img src='carrots2again.png'></img></th><th>Hachaama<img src='heart.png'></img></th></tr>
-          <tr><td><SoundList data = {props.korone} start = {start} filter = {filterText} button="Korone-button"/></td>
-          <td><SoundList data = {props.pekora} start = {start} filter = {filterText} button="Pekora-button"/></td>
-          <td><SoundList data = {props.haachama} start = {start} filter = {filterText} button="Haachama-button"/></td></tr>
-          </table>
+          <tr>
+
+          <td style={{verticalAlign: 'top'}}>
+            <table>
+              <tr><th style={{color:'orange'}}>Pekora<img src='./images/carrots.png'></img></th></tr>
+              <tr><td><SoundList data = {props.pekora} start = {start} filter = {filterText} button="Pekora-button"/></td></tr>
+            </table>
           </td>
-          <td style={{verticalAlign: 'top'}}>test</td>
+
+          <td style={{verticalAlign: 'top'}}>
+            <table>
+              <tr><th style={{color: 'sandybrown'}}>Korone<img src='./images/bone.png'></img></th></tr>
+              <tr><td><SoundList data = {props.korone} start = {start} filter = {filterText} button="Korone-button"/></td></tr>
+            </table>
+          </td>
+
+          <td style={{verticalAlign: 'top'}}>
+            <table>
+              <tr><th style={{color:'red'}}>Hachaama<img src='./images/heart.png'></img></th></tr>
+              <td><SoundList data = {props.haachama} start = {start} filter = {filterText} button="Haachama-button"/></td>
+            </table>
+          </td>
+
           </tr>
           </table>
       </header>

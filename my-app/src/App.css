@@ -31,7 +31,7 @@
   font-size: 16px;
   border-radius: 10px;
   height: 35px;
-  width: 180px
+  width: 180px;
 }
 
 .Pekora-button {
@@ -45,7 +45,8 @@
   font-size: 16px;
   border-radius: 10px;
   height: 35px;
-  width: 180px
+  width: 180px;
+  font-weight: lighter;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -55,7 +56,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0b2a68;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
