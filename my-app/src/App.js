@@ -8,16 +8,18 @@ const App= (props)=> {
 const [filterText, setFilterText] = useState('');
 const [listUpdate,setListUpdate] = useState(false);
 
+//Update the filter based on the input form
 const filterUpdate = (evt) => {
   setFilterText(evt.target.value);
-  console.log(filterText);
 };
 
+//Used for playing audio clip
 const start = (name) => {
   let audio = new Audio(name);
   audio.play();
 } 
 
+//Rendering of main page.
   return (
     <div className="App">
       <header className="App-header"><h1 style={{fontSize: '50px',marginBottom: '0px'}}>PA3: Soundboard</h1>

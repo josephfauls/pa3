@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
 const SoundList = (props) => {
-    //console.log('This is my directory file', this.props.data);
+  //Method for playing the audio files
     const start = (evt) => {
-        console.log(evt.target.value);
-
         var audio = new Audio("./audioFiles/"+evt.target.value);
         audio.play();
       }
@@ -13,6 +11,8 @@ const SoundList = (props) => {
       var myString = "";
       myString += props.filter;
       myString1 +=sound.name;
+
+      //Checking if the name contains the filter (if yes -> render button)
         if ((sound.name).includes(props.filter) || sound.name.toLowerCase().includes(props.filter)) {
         return (
             <tr key={sound.name}>
